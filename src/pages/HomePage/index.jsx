@@ -53,10 +53,11 @@ function HomePage() {
     }
   }, [data]);
 
-  // set state post by tags pagination
-  // TODO: Resolve bug: empty the posts and add the posts by tag
+  // overwrite all posts, knowing that pagination is assigned 0 when filtered by tag
   useEffect(() => {
-    if (dataGetByTag && dataGetByTag.length > 0)
+    if (dataGetByTag && dataGetByTag.length > 0 && numberCurrentPage === 0)
+      setPosts(dataGetByTag);
+    if (dataGetByTag && dataGetByTag.length > 0 && numberCurrentPage > 0)
       setPosts((prevPosts) => [...prevPosts, ...dataGetByTag]);
   }, [dataGetByTag, setPosts]);
 
@@ -73,7 +74,6 @@ function HomePage() {
     setIsFilterTag(true);
   };
 
-  console.log(currentTag);
   return (
     <div>
       <Tags
