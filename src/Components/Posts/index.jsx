@@ -4,7 +4,7 @@ import Post from "../Post";
 
 import styles from "./styles.module.css";
 
-function Posts({ posts }) {
+function Posts({ posts, setShowModal, setPostID }) {
   return (
     <ul className={styles["c-posts"]}>
       {posts.map((post) => {
@@ -16,7 +16,14 @@ function Posts({ posts }) {
           tags = [],
         } = post || {};
         return (
-          <li key={id} className={styles["loop-posts__post"]}>
+          <li
+            key={id}
+            className={styles["loop-posts__post"]}
+            onClick={() => {
+              setShowModal(true);
+              setPostID(id);
+            }}
+          >
             <Post
               postId={id}
               postImage={image}
@@ -41,10 +48,14 @@ Posts.propTypes = {
       tags: PropTypes.arrayOf(PropTypes.string).isRequired,
     })
   ),
+  setShowModal: PropTypes.func.isRequired,
+  setPostID: PropTypes.func.isRequired,
 };
 
 Posts.defaultProps = {
   posts: [],
+  setShowModal: () => {},
+  setPostID: () => {},
 };
 
 export default Posts;
