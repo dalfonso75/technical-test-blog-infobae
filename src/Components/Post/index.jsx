@@ -37,7 +37,7 @@ export default function Post({ postImage, postTitle, postAuthor, postTags }) {
 Post.propTypes = {
   postImage: PropTypes.string.isRequired,
   postTitle: PropTypes.string.isRequired,
-  postAuthor: PropTypes.string.isRequired,
+  postAuthor: PropTypes.object.isRequired,
   postTags: PropTypes.array.isRequired,
 };
 

@@ -1,0 +1,22 @@
+.c-tags {
+  display: block;
+  margin: 50px 50px;
+  padding: 0;
+}
+.tags__select {
+  margin-left: 20px;
+  padding: 5px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+.tags__select-option {
+  margin: 0;
+  padding: 0;
+  text-overflow: ellipsis;
+}
+.tags__without-results {
+  margin-left: 10px;
+}
