@@ -1,0 +1,16 @@
+.button__login {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 18px;
+  padding: 5px 20px;
+  background-color: transparent;
+  border: 1px solid #3b3b3b;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  cursor: pointer;
+}

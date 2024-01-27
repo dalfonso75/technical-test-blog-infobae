@@ -9,6 +9,10 @@ import Pagination from "../../Components/Pagination";
 import Modal from "../../Components/Modal";
 import Comments from "../../Components/Comments";
 
+import Login from "../../Components/Login";
+
+import styles from "./styles.module.css";
+
 function HomePage() {
   // custom hook for posts
   const { get, data } = usePosts();
@@ -76,11 +80,14 @@ function HomePage() {
 
   return (
     <div>
-      <Tags
-        tags={tags}
-        handleStatesByTag={handleStatesByTag}
-        hasResults={dataGetByTag && dataGetByTag.length === 0}
-      />
+      <header className={styles["header__wrapper"]}>
+        <Tags
+          tags={tags}
+          handleStatesByTag={handleStatesByTag}
+          hasResults={dataGetByTag && dataGetByTag.length === 0}
+        />
+        <Login />
+      </header>
 
       <Posts posts={posts} setShowModal={setShowModal} setPostID={setPostID} />
 
