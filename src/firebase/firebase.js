@@ -7,26 +7,9 @@ const MESSAGEING_SENDER_ID = environments.VITE_MESSAGEING_SENDER_ID;
 const APP_ID_FIREBASE = environments.VITE_APP_ID_FIREBASE;
 
 import { initializeApp } from "firebase/app";
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  getDocs,
-  doc,
-  getDoc,
-  query,
-  where,
-  setDoc,
-  deleteDoc,
-} from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-import {
-  getStorage,
-  ref,
-  uploadBytes,
-  getDownloadURL,
-  getBytes,
-} from "firebase/storage";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: APIKEY,
