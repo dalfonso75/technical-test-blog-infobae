@@ -22,9 +22,10 @@ export default function Post({ postImage, postTitle, postAuthor, postTags }) {
         />
         <ul className={styles["post__tags"]}>
           <span className={styles["post__tag-title"]}>Etiquetas:</span>
-          {postTags.map((tag) => (
+          {postTags.map((tag, index) => (
             <li key={"tag-" + tag} className={styles["post__tag"]}>
               {tag}
+              {index < postTags.length - 1 && ","}
             </li>
           ))}
         </ul>
