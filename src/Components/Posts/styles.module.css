@@ -1,0 +1,13 @@
+.c-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 18%));
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  row-gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+.loop-posts__post {
+  list-style: none;
+}
