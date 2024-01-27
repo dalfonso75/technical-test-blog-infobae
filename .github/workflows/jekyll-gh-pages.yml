@@ -24,6 +24,12 @@ concurrency:
 env:
   VITE_API_URL_BASE: ${{ secrets.VITE_API_URL_BASE }}
   VITE_APP_ID: ${{ secrets.VITE_APP_ID }}
+  VITE_APIKEY: ${{ secrets.VITE_APIKEY }}
+  VITE_AUTHDOMAIN: ${{ secrets.VITE_AUTHDOMAIN }}
+  VITE_PROJECTID: ${{ secrets.VITE_PROJECTID }}
+  VITE_STORAGEBUCKET: ${{ secrets.VITE_STORAGEBUCKET }}
+  VITE_MESSAGEING_SENDER_ID: ${{ secrets.713545563059 }}
+  VITE_APP_ID_FIREBASE: ${{ secrets.VITE_APP_ID_FIREBASE }}
 
 jobs:
   # Single deploy job since we're just deploying
